@@ -1,0 +1,52 @@
+<!DOCTYPE html>
+<html xmlns:th="http://www.thymeleaf.org">
+<head>
+	<title>New Task</title>
+	<meta http-equiv="Content-Type" content="text/html; charset=UTF-8"/>
+	<div th:replace="/fragments/styling :: head-style" ></div>
+<!-- 	<div th:fragment="head-style">  -->
+	<meta http-equiv="Content-Type" content="text/html; charset=UTF-8" />
+	<link href="../../webjars/bootstrap/3.3.7/css/bootstrap.min.css"
+		rel="stylesheet">
+	<link href="../../css/standard.css" rel="stylesheet">
+
+</head>
+<body>
+	<div class="container">
+		<div th:replace="/fragments/navbar :: navbar" ></div>
+		<h1>Create a New To Do</h1>
+		<form action="#" th:action="@{/new}" th:object="${tasks}"
+			method="post">
+
+			<div class="form-group">
+				<input type="text" class="form-control" placeholder="Enter a task"
+					th:field="*{task}" />
+			</div>
+
+			<div class="form-group">
+				<input type="text" class="form-control"
+					placeholder="Who is assigned?" th:field="*{assigned}" />
+			</div>
+
+			<div class="form-group">
+				<input type="text" class="form-control" placeholder="Enter high, medium or low"
+					th:field="*{priority}" />
+			</div>
+
+			<div class="form-group">
+				<input type="text" class="form-control" placeholder="WorkingOnIt, Done, NeedHelp, or Waiting"
+					th:field="*{status}" />
+			</div>
+			
+			<div class="form-group">
+				<input type="text" class="form-control" placeholder="Enter task notes and updates"
+					th:field="*{note}" />
+			</div>
+			
+			
+
+			<button class="btn btn-primary">Submit Your Task</button>
+		</form>
+	</div>
+</body>
+</html>

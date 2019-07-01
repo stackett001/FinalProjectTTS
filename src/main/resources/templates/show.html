@@ -1,0 +1,19 @@
+<!DOCTYPE html>
+<html xmlns:th="http://www.thymeleaf.org">
+<head>
+<title>To Do's </title>
+<meta http-equiv="Content-Type" content="text/html; charset=UTF-8" />
+<!--<div th:replace="/fragments/styling :: head-style"></div> -->
+</head>
+<body>
+<!--	<div th:replace="fragments/navbar :: navbar"></div> -->
+	<div class="container">
+		<h1 th:text="${chores.task}"></h1>
+		<h3 th:text="${chores.assigned}"></h3>
+		<p th:text="${chores.priority}"></p>
+		<p th:text="${chores.status}"></p>
+		<p th:text="${chores.note}"></p>
+	</div>
+<!--	<div th:replace="/fragments/styling :: body-links"></div> -->
+</body>
+</html>

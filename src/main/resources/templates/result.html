@@ -1,0 +1,43 @@
+<!DOCTYPE html>
+<html xmlns:th="http://www.thymeleaf.org">
+<head>
+<title>Blog Site</title>
+<meta http-equiv="Content-Type" content="text/html; charset=UTF-8" />
+<link href="../../webjars/bootstrap/3.3.7/css/bootstrap.min.css"
+	rel="stylesheet">
+<link href="../../css/standard.css" rel="stylesheet">
+</head>
+<body>
+	<div class="container">
+	  <div class="row">
+	  	<div class="col-md-4">
+	  	  <div class="panel panel-info">
+	  	    <div class="panel-heading">
+	  	      <strong><h3 th:text="${task}"></h3></strong>
+	  	    </div>
+	  	    <div class="card-body">
+	  	      <strong><p th:text="${assigned}" /></strong>
+	  	      <p th:text="${priority}" />
+	  	      <p th:text="${status}" />
+	  	      <p th:text="${note}" />
+	  	     </div> 
+	  	     <div class="panel-footer">
+				<!-- Link to Update -->
+				<!-- Link to Show  -->
+				<!--  Link to Destroy -->
+				<a th:href="@{/}"><button class="btn btn-success">Back To Home Page</button></a> 
+				<a th:href="@{/new}"><button class="btn btn-primary">Submit a New ToDo</button></a>
+			</div>
+	  	      
+	  	      
+	  	      
+	  	      
+	  	  
+	    </div>
+	  </div>
+	</div>
+  </div>
+	<script src="../../webjars/bootstrap/3.3.6/js/bootstrap.min.js"></script>
+	<script src="../../webjars/jquery/1.9.1/jquery.min.js"></script>
+</body>
+</html>
